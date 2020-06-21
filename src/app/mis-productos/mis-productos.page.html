@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mis Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item> 
+    <ion-label>Categoría</ion-label>
+    <ion-select interface="popover" placeholder="Elige una" [(ngModel)] = "option"> 
+      <ion-select-option value="Tecnologia">Tecnología</ion-select-option>
+      <ion-select-option value="Hogar">Hogar</ion-select-option>
+      <ion-select-option value="Inmobiliaria">Inmobiliaria</ion-select-option>
+      <ion-select-option value="Motor" >Motor</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <div *ngFor="let item of producto"> <!--Recogemos los productos de ese USUARIO-->
+    <div *ngIf = "option == item.categoria">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{item.nombre}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-label>Descripción: {{item.descripcion}}</ion-label>
+        </ion-card-content>
+        
+        <ion-button color="primary" (click)="eliminarProducto(item.id)">Eliminar producto</ion-button>  <!--Elimina el producto con la id del PRODUCTO de este usuario-->
+        <ion-button color="primary" [routerLink]="['/modificar', item.id]" routerDirection="forward">Modificar producto</ion-button>
+      </ion-card>
+    </div>
+  </div>
+
+  <!--Botón para volver al menú principal-->
+  <ion-button routerLink="/home" routerDirection="forward">Volver</ion-button>
+
+</ion-content>

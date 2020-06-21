@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Selecciona una opción
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <!--Código AE11 le pasamos la ID del USUARIO para ver solo los productos de ese usuario-->
+    <ion-button [routerLink]="['/mis-productos', id]" routerDirection="forward">Mis productos</ion-button>
+    <br>
+
+    <!--Código AE10 le pasamos la ID del USUARIO para insertar productos con ese usuario-->
+    <ion-button [routerLink]="['/insertar', id]" routerDirection="forward">Insertar productos</ion-button>
+    <br>
+
+    <!--Código AE9 llamamos la funcion de mostrar o no la lista-->
+    <ion-button (click)="cambiarOculto()">Lista de productos</ion-button>
+
+
+    
+    
+    <!--Código AE9-->
+    <div *ngIf = "!oculto"> <!--Si esta oculto, todo lo demás no se muestra, porque es la etiqueta padre-->
+      <ion-card *ngFor="let item of producto"> <!--producto es una variable[] de home.page.ts-->
+        <ion-card-header>
+          <ion-card-title>{{item.nombre}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-label>Descripción: {{item.descripcion}}</ion-label>
+        </ion-card-content>
+
+        <!--Pasamos el item.id que es el atributo id del producto seleccionado. Así luego podemos sacar toda su información-->
+        <ion-button [routerLink]="['../mas-detalles/',item.key]" routerDirection="forward" >
+          Más detalles</ion-button>  
+      </ion-card>
+    </div>
+</ion-content>
+
+
+<ion-footer style="margin-top: 10px;">
+  <ion-toolbar>
+    <ion-button expand="block" routerLink="/login" routerDirection="forward">Volver</ion-button>
+  </ion-toolbar>
+</ion-footer>
