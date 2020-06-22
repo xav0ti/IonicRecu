@@ -60,6 +60,14 @@
     </ion-item>
 
     <ion-item>
+      <ion-label position="floating">Vendido</ion-label>
+      <ion-select aria-placeholder="Se vende?" [(ngModel)]="Vendido">
+        <ion-select-option value="En venta">En venta</ion-select-option>
+        <ion-select-option value="Vendido">Vendido</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
       <ion-label position="floating">Precio</ion-label>
       <ion-input type="number" [(ngModel)]="precio"></ion-input>
     </ion-item>
@@ -93,6 +101,15 @@
         <ion-select-option value="Hogar">Hogar</ion-select-option>
         <ion-select-option value="Inmobiliaria">Inmobiliaria</ion-select-option>
         <ion-select-option value="Motor">Motor</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Vendido</ion-label>
+      <ion-select aria-placeholder="Se vende?" [(ngModel)]="Vendido">
+        <ion-select-option value="En venta">En venta</ion-select-option>
+        <ion-select-option value="Vendido">Vendido</ion-select-option>
       </ion-select>
     </ion-item>
                 
@@ -166,6 +183,16 @@
       <ion-label position="floating">Precio</ion-label>
       <ion-input type="number" [(ngModel)]="precio"></ion-input>
     </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Vendido</ion-label>
+      <ion-select aria-placeholder="Se vende?" [(ngModel)]="Vendido">
+        <ion-select-option value="En venta">En venta</ion-select-option>
+        <ion-select-option value="Vendido">Vendido</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
       
     <ion-button color="primary" (click)="insertarInm(); restauraDatos()">Añadir producto</ion-button>
 
@@ -217,6 +244,14 @@
     <ion-item>
       <ion-label position="floating">Año</ion-label>
       <ion-input type="number" [(ngModel)]="anyo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Vendido</ion-label>
+      <ion-select aria-placeholder="Se vende?" [(ngModel)]="Vendido">
+        <ion-select-option value="En venta">En venta</ion-select-option>
+        <ion-select-option value="Vendido">Vendido</ion-select-option>
+      </ion-select>
     </ion-item>
 
 

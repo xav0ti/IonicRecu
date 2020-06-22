@@ -28,7 +28,11 @@
         </ion-card-content>
         
         <ion-button color="primary" (click)="eliminarProducto(item.id)">Eliminar producto</ion-button>  <!--Elimina el producto con la id del PRODUCTO de este usuario-->
+        
         <ion-button color="primary" [routerLink]="['/modificar', item.id]" routerDirection="forward">Modificar producto</ion-button>
+      
+
+        
       </ion-card>
     </div>
   </div>

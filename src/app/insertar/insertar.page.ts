@@ -48,6 +48,7 @@ export class InsertarPage implements OnInit {
   banyos: number = 0;
   claveUsuario: string = "";
   categoria: string;
+  vendido: boolean;
 
 
   
@@ -150,6 +151,7 @@ actualizarClave(clave: string){
                                       "precio": this.precio,
                                       "claveUsuario": this._activatedRoute.snapshot.paramMap.get("id"),
                                       "categoria": this.categoria
+                                      
                                   };
       //Código AE8//                             
       //this.producto.push(productoInm);
@@ -175,6 +177,7 @@ actualizarClave(clave: string){
                                       "precio": this.precio,
                                       "claveUsuario": this._activatedRoute.snapshot.paramMap.get("id"),
                                       "categoria": this.categoria
+                                      
                                   };
       //Código AE8// 
       //this.producto.push(productoMot);
