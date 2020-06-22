@@ -1,13 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title> LOGIN </ion-title>
+    <ion-title> REGISTRO </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
   <div align="center">
-    <p style="font-size: 26px;font-weight: bold;margin-bottom: 8px;margin-top: 15px; text-decoration: underline;">Login</p>
+    <p style="font-size: 26px;font-weight: bold;margin-bottom: 8px;margin-top: 15px; text-decoration: underline;">Registro</p>
   </div>
 
   <ion-card>
@@ -24,9 +24,6 @@
     </ion-item>
   </ion-card>
 
-  <ion-button [routerLink]="['/home', nombre]" routerDirection="forward">Iniciar sesión</ion-button>
-  <ion-button [routerLink]="['/registro']" routerDirection="forward">Registro</ion-button>
-
+  <ion-button [routerLink]="['/home', nombre]" routerDirection="forward" (click)="insertarUsuario()">Registrarse</ion-button>
 
 </ion-content>
-

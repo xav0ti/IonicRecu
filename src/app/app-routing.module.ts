@@ -33,7 +33,11 @@ const routes: Routes = [
   {
     path: 'modificar/:id',
     loadChildren: () => import('./modificar/modificar.module').then( m => m.ModificarPageModule)
+  },  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   },
+
 ];
 
 @NgModule({
